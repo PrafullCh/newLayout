@@ -1,0 +1,91 @@
+#footer {
+  width:100%;
+  background-color:#373d42;
+  display:flex;
+  flex-direction:column;
+  flex-wrap:wrap;
+}
+
+.footer-link {
+  margin:0px;
+  margin-bottom: 5px;
+  text-decoration:none;
+  color:white;
+}
+
+#footer-lower {
+  text-align:center;
+  color:white;
+}
+
+#footer-seperation-line {
+  background-color:white;
+  margin:10px 60px;
+}
+
+.footer-appreciation-word {
+  font-size:10px;
+  margin: 0px 0px 5px 0px;
+}
+
+.footer-upper-block {
+  flex:1;
+  color:white;
+  text-align:center;
+  padding:8px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer-upper-block > *{
+  margin: 10px;
+}
+
+@media (max-width: 992px) {
+  .footer-upper-block {
+    flex:1;
+    color:white;
+    text-align:center;
+    padding:8px;
+  }
+}
+
+#footer-upper {
+  display:flex;
+  align-items:center;
+  width:inherit;
+  flex-direction:row;
+}
+
+@media (min-width: 768px) {
+  #footer-upper {
+    display:flex;
+    align-items:center;
+    width:inherit;
+    flex-direction:row;
+  }
+}
+
+@media (max-width: 576px) {
+  #footer-upper {
+    display:flex;
+    align-items:center;
+    width:inherit;
+    flex-direction:column;
+  }
+}
+
+@media (max-width: 360px) {
+  #footer-upper {
+    display:flex;
+    align-items:center;
+    width:inherit;
+    flex-direction:column;
+  }
+}
+
+@media (max-width: 360px) {
+  #footer-lower > p {
+    padding:0px 10px;
+  }
+}
+

@@ -1,0 +1,112 @@
+#donation-page{
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 20vh 1fr;
+}
+.donation-content{
+    display: grid;
+    grid-template-columns: 50% 49%;
+    grid-gap: 1%;
+    /* align-items: center; 17-11-2020 */
+}
+.donation-form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+    padding: 20px;
+    background-color: white;
+}
+.donation-form > div:nth-child(1){
+    grid-column:1/3 ;
+}
+.donation-form > div:nth-child(1) > h3{
+    text-align:center;
+}
+
+.donation-form > div:nth-child(5){
+    grid-column: 2/3;
+    grid-row: 3/6;
+    /* background-color: aqua; */
+    padding-bottom: 20px;
+}
+.donation-form > div:nth-child(8),.donation-form > div:nth-child(9),.donation-form > div:nth-child(10) {
+    grid-column: 1/3;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+.donation-form > div:nth-child(8) > *{
+    width: 30%;
+    margin: 0 2%;
+}
+.donation-form > div:nth-child(9) > *{
+    width: 50%;
+}
+@media screen and (max-width:992px){
+    .donation-form{
+        grid-template-columns: 100%;
+    }
+    .donation-form > div:nth-child(1){
+        grid-column:1/2 ;
+    }
+    .donation-form > div:nth-child(5){
+        grid-column: 1/2;
+        grid-row: 5/7;
+        padding-bottom: 0;
+    }
+    .donation-form > div:nth-child(8),
+    .donation-form > div:nth-child(9),
+    .donation-form > div:nth-child(10) {
+        grid-column: 1/2;
+    }
+    .donation-form > div:nth-child(8){
+        grid-row: 7/8;
+    }
+    
+    .donation-form > div:nth-child(8){
+        grid-row: 8/9;
+    }
+    
+    .donation-form > div:nth-child(8){
+        grid-row: 9/10;
+    }
+}
+.donation-info{
+    padding: 10px;
+    background-color: white;
+}
+.donation-info > h3{
+    text-align: center;
+    padding: 10px;
+}
+.donation-info > .donation-item{
+    /* text-align: center; */
+    padding: 5px;
+}
+.donation-info > img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.donation-info > .donation-item > span{
+    font-size: 24px;
+    font-weight: bolder;
+}
+/* .donation-info > .donation-item ::before{
+    content: attr(&#9624;);
+} */
+.donation-info > .address-title{
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+}
+.donation-info > .address{
+    font-size: 22px;
+}
+@media screen and (max-width:768px){
+    .donation-content{
+        grid-template-columns: 100%;
+    }
+}

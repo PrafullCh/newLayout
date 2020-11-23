@@ -1,0 +1,148 @@
+#directory-page{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20vh 1fr;
+}
+#directory-content{
+    --row-sizes:100%;
+    --column-sizes:350px 1fr;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: var(--column-sizes);
+    grid-template-rows: var(--row-sizes);
+    justify-content: center;
+    padding: 20px;
+}
+#directory-content > .filters{
+    height: 100%;
+}
+#directory-content > .filters > .field{
+    width: 100%;
+    margin: 10px auto;
+}
+#directory-content > .filters > .field > .field-heading{
+    border: 1px solid var(--main-color);
+    padding: 10px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.342);
+    transition: all 0.1s ease-in-out;
+    background-color: var(--main-fg-color);
+    height: 100%;
+}
+#directory-content > .filters > .filter-title{
+    width: 95%;
+    background-color: rgb(214, 198, 198);
+    padding: 20px;
+    margin: 0;
+}
+#filter-expander{
+    display: inline-block;
+    float: right;
+}
+.rotator{
+    display: inline-block;
+    float: right;
+}
+#directory-content > .filters > .field > .field-heading:hover{
+    border-left: 10px solid var(--main-color);
+}
+#directory-content > .filters > .field > .field-content{
+    margin: 5px;
+    display: none;
+}
+#directory-content > #records{
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
+    /* overflow: hidden; */
+}
+#directory-content > #records > .record{
+    display: grid;
+    grid-template-columns: 90px 1fr 130px;
+    grid-gap: 10px;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.329);
+}
+#directory-content > #records > .record > img{
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+
+}
+#directory-content > #records > .record > .record-content > *{
+    margin: 5px;
+}
+#directory-content > #records > .record > .record-content > h4:nth-child(1){
+    color: green;
+}
+#directory-content > #records > .record > .action > a{
+    text-decoration: none;
+    color: rgb(37, 29, 29);
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: aliceblue;
+}
+#directory-content > #records > .record > .action > a:nth-child(1){
+    background-color: rgba(255, 68, 0, 0.466);
+    margin-bottom: 5px;
+}
+
+#directory-content > #records > .record > .action > a:nth-child(2){
+    background-color: rgba(54, 23, 192, 0.466);
+}
+.directory-content p {
+    color: gray;
+}
+
+@media screen and (max-width:992px){
+    #directory-content{
+        --column-sizes:250px 1fr;
+    }
+}
+@media screen and (max-width:768px){
+    #directory-content{
+        --column-sizes:100%;
+        --row-sizes:auto 1fr;
+    }
+    #directory-content > .filters > .field{
+        display: none;
+    }
+    
+    
+}
+@media screen and (max-width:518px){
+    #directory-content > #records{
+        grid-auto-rows:auto;
+    }
+    #directory-content > #records > .record{
+        grid-template-columns: 90px 1fr;
+        padding: 5px;
+    }
+    #directory-content > #records > .record > div:nth-child(3){
+        grid-column: 1/3;
+    }
+    #directory-content > .filters > .filter-title{
+        width: 85%;
+    }
+    #directory-content > #records > .record > .action {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #directory-content > #records > .record > .action >a{
+        width: 80px;
+    }
+    #directory-content > #records > .record > .action >a:nth-child(1){
+        margin-bottom: 0;
+    }
+}
+/* overridden styles for directory page only-child */
+.group{
+    height: 40px;
+}

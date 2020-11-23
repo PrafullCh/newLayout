@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+html,body{
+    margin: 0;
+    padding: 0;   
+    font-family: sans-serif;
+    --main-fg-color:#FFF1E5;
+    background-color: var(--main-fg-color);
+    --large-screen:1200px;
+    --medium-screen:992px;
+    --small-screen:768px;
+    --xs-screen:576px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    /* user-select: none; */
+}
+.title{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+    background: rgb(108,225,144);
+    background: linear-gradient(0deg, rgba(108,225,144,1) 58%, rgba(134,236,125,0.42620798319327735) 100%);
+}
+.title > p{
+    color: rgba(43, 36, 36, 0.897);
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color:black;
+}

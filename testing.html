@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
+   <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,25%);
+            /* grid-gap: 5px; */
+        }
+        .group{
+            width: 90%;
+            position: relative;
+            height: 50px;
+            overflow: hidden;
+        }
+        input{
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            padding-top: 15px;
+            color: black;
+        }
+        label {
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            pointer-events: none;
+            border-bottom: 1px solid black;
+            color: gray;
+        }
+        label::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0px;
+            bottom: -1px;
+            border-bottom: 1px solid #5fa8d3;
+            transform: translateX(-100%);
+        }
+        label > span{
+            position: absolute;
+            bottom: 5px;
+            left: 0px;
+            transition: all 0.3s ease-in-out;
+        }
+         input:focus + label >span , input:valid + label >span{
+            transform: translateY(-150%);
+            font-size: 14px;
+            color: #5fa8d3;
+        }
+        input:focus + label::after , input:valid + label::after{
+            transform: translateX(0%);
+        }
+        button, input[type="submit"]{
+            padding: 10px;
+            width: initial;
+            border: none;
+        }
+   </style> 
+</head>
+<body>
+    <form action="#" method="get">
+    <div class="container">
+        <div class="group">
+            <input type="text" name="name"  required  pattern=".*\S+.*"/>
+            <label for="name"><span>Name</span></label>
+        </div>
+        <div class="group">
+            <input type="text" required/>
+            <label for="name"><span>Address</span></label>
+        </div>
+        <div class="group">
+            <input type="text" required/>
+            <label for="name"><span>Age</span></label>
+        </div>
+        <div class="group">
+            <input type="text" required/>
+            <label for="name"><span>Gender</span></label>
+        </div>
+    </div>
+    <button type="submit" >submit</button>
+    <input type="submit" value="submit">
+</form>
+    <script>
+
+    </script>
+</body>
+</html>
